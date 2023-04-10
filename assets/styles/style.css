@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+.d-flex {
+  display: flex; }
+
+.full-width {
+  width: 100%; }
+
+body h2 {
+  font-size: 21px;
+  text-transform: uppercase; }
+body h3 {
+  font-size: 16px; }
+body h4 {
+  font-size: 14px; }
+body .wrap {
+  padding: 40px 30px;
+  align-items: center; }
+  body .wrap .container-sections {
+    justify-content: space-between;
+    height: 100%; }
+    body .wrap .container-sections .container-section {
+      flex-direction: column;
+      width: 32%; }
+      body .wrap .container-sections .container-section h2 {
+        margin-top: 40px; }
+      body .wrap .container-sections .container-section:nth-of-type(2) .container-btn {
+        padding-bottom: 40px; }
+      body .wrap .container-sections .container-section .container-img {
+        position: relative; }
+        body .wrap .container-sections .container-section .container-img .container-heart {
+          position: absolute;
+          right: 30px;
+          top: 30px;
+          background-color: #fff;
+          padding: 8px 10px;
+          border-radius: 50%;
+          cursor: pointer; }
+          body .wrap .container-sections .container-section .container-img .container-heart .heart {
+            width: 20px;
+            height: 20px;
+            transform: translateY(3px); }
+      body .wrap .container-sections .container-section .container-text {
+        text-align: center; }
+        body .wrap .container-sections .container-section .container-text h3 {
+          margin-top: 5px; }
+          @media screen and (max-width: 500px) {
+            body .wrap .container-sections .container-section .container-text h3 {
+              margin-top: 10px; } }
+        @media screen and (max-width: 500px) {
+          body .wrap .container-sections .container-section .container-text h2 {
+            margin-top: 16px; } }
+@media screen and (max-width: 500px) and (max-width: 500px) {
+  body .wrap .container-sections .container-section .container-text {
+    margin-top: 25px;
+    padding-bottom: 60px; } }
+
+        body .wrap .container-sections .container-section .container-text .container-btn {
+          color: #c29c5b;
+          text-transform: uppercase;
+          margin-top: 18px;
+          cursor: pointer; }
+          body .wrap .container-sections .container-section .container-text .container-btn h4 {
+            display: inline-block; }
+          body .wrap .container-sections .container-section .container-text .container-btn a {
+            color: #c29c5b; }
+          body .wrap .container-sections .container-section .container-text .container-btn .arrow-right {
+            display: inline-block;
+            margin-left: 4px;
+            width: 20px;
+            height: 10px;
+            position: relative;
+            transform: translateX(0px); }
+            body .wrap .container-sections .container-section .container-text .container-btn .arrow-right:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 10px;
+              height: 2px;
+              background-color: #c29c5b; }
+            body .wrap .container-sections .container-section .container-text .container-btn .arrow-right:after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 0;
+              height: 0;
+              transform: translateY(-50%) translateX(1px);
+              border-top: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              border-left: 10px solid #c29c5b; }
+        body .wrap .container-sections .container-section .container-text:hover .arrow-right {
+          animation: moveBox 1s forwards; }
+      @media screen and (max-width: 500px) {
+        body .wrap .container-sections .container-section {
+          width: 100%; } }
+      @media screen and (max-width: 500px) {
+        body .wrap .container-sections .container-section:nth-child(2) {
+          display: flex;
+          flex-direction: column-reverse; } }
+    @media screen and (max-width: 500px) {
+      body .wrap .container-sections {
+        flex-direction: column; } }
+
+@keyframes moveBox {
+  from {
+    left: 0; }
+  to {
+    transform: translateX(30px); } }
+
+/*# sourceMappingURL=style.css.map */

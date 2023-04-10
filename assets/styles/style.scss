@@ -1,0 +1,178 @@
+$link-color: #c29c5b;
+$white: #fff;
+$title: 21px;
+$subtitle: 16px;
+$link: 14px;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.full-width {
+    width: 100%;
+}
+
+body {
+    h2 {
+        font-size: $title;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: $subtitle;
+    }
+
+    h4 {
+        font-size: $link;
+    }
+
+    .wrap {
+        padding: 40px 30px;
+        align-items: center;
+
+        .container-sections {
+            justify-content: space-between;
+            height: 100%;
+
+            .container-section {
+                flex-direction: column;
+                width: 32%;
+
+                h2 {
+                    margin-top: 40px;
+                }
+
+                &:nth-of-type(2) {
+                    .container-btn {
+                        padding-bottom: 40px;
+                    }
+                }
+
+                .container-img {
+                    position: relative;
+
+                    .container-heart {
+                        position: absolute;
+                        right: 30px;
+                        top: 30px;
+                        background-color: $white;
+                        padding: 8px 10px;
+                        border-radius: 50%;
+                        cursor: pointer;
+
+                        .heart {
+                            width: 20px;
+                            height: 20px;
+                            transform: translateY(3px);
+                        }
+                    }
+                }
+
+                .container-text {
+                    text-align: center;
+
+                    h3 {
+                        margin-top: 5px;
+
+                        @media screen and (max-width: 500px) {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        h2 {
+                            margin-top: 16px;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            margin-top: 25px;
+                            padding-bottom: 60px;
+                        }
+                    }
+                    .container-btn {
+                        color: $link-color;
+                        text-transform: uppercase;
+                        margin-top: 18px;
+                        cursor: pointer;
+
+                        h4 {
+                            display: inline-block;
+                        }
+
+                        a {
+                            color: $link-color;
+                        }
+
+                        .arrow-right {
+                            display: inline-block;
+                            margin-left: 4px;
+                            width: 20px;
+                            height: 10px;
+                            position: relative;
+                            transform: translateX(0px);
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                width: 10px;
+                                height: 2px;
+                                background-color: $link-color;
+                            }
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                width: 0;
+                                height: 0;
+                                transform: translateY(-50%) translateX(1px);
+                                border-top: 5px solid transparent;
+                                border-bottom: 5px solid transparent;
+                                border-left: 10px solid $link-color;
+                            }
+                        }
+                    }
+
+                    &:hover .arrow-right {
+                        animation: moveBox 1s forwards;
+                    }
+                }
+
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 500px) {
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@keyframes moveBox {
+    from {
+        left: 0;
+    }
+    to {
+        transform: translateX(30px);
+    }
+}
